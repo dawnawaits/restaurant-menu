@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --light-green: #d8d174;
+    --cream: #f6fedb;
+    --forest-green: #b6c454;
+}
+
+body {
+    padding: 5vw;
+    background-color: var(--light-green);
+}
+
+.title {
+    color: var(--cream);
+    font-family: Montserrat;
+}
+
+.small-hr {
+    margin: 10px 0 20px 0;
+    width: 35px;
+    height: 8px;
+    background-color: var(--cream);
+    border: none;
+}
+
+.tag-button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 3px 10px;
+    min-width: 80px;
+    border: white solid 2px;
+    border-radius: 12px;
+    background-color: var(--forest-green);
+    font-family: "Hind Madurai";
+    font-weight: bold;
+    color: var(--cream);
+    cursor: pointer;
+}
+
+.tag-button:hover {
+    background-color: #8c9740;
+}
+
+.item {
+    background-color: var(--cream);
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin: 20px 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    min-height: 300px;
+}
+
+.item > img {
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.item-text {
+    width: calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.item-title {
+    font-family: Lora;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--forest-green);
+}
+
+.item-body {
+    font-family: "Hind Madurai";
+}
+
+.price-title {
+    font-size: 1.2em;
+}
+
+/* TODO: Make responsive */
+@media only screen and (max-width: 600px) {
+    .item > img {
+        position: static;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+
+    .item-text{
+        width: calc(100% - 40px);
+    }
+}
